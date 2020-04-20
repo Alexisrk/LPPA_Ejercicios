@@ -6,13 +6,23 @@
 <h2>Create</h2>
 
 <form method="post" action="/Producto/Create">
-    <label for="codigo"> </label>
-    <input type="number" name="codigo" />
+    <br />
+    <label for="codigo">Código</label>
+    <br />
+    <input type="number" name="codigo" required />
     <br />
     <label for="nombre">Nombre</label>
+    <br />
     <input type="text" name="nombre" />
     <br />
+    <!--
+    <label for="email">Email</label>
+    <br />
+    <input type="email" name="email" placeholder="aaa.bbb.com" />
+    <br />
+    -->
     <label for="descripcion">Descripcion</label>
+    <br />
     <input type="text" name="descripcion" />
     <br />
     <button type="submit">Guardar</button>

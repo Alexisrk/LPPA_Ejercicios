@@ -1,4 +1,5 @@
-﻿
+﻿@using LPPA_Ejercicios.Helper;
+@model IList<Producto>
 @{
     ViewBag.Title = "Index";
 }
@@ -8,3 +9,24 @@
 <p>
     <a href="/Producto/Create">Nuevo Producto</a>
 </p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    @foreach (Producto item in Model)
+    {
+        <tr>
+            <td> @item.Nombre</td>
+            <td> @item.Codigo</td>
+            <td> @item.Descripcion</td>
+        </tr>
+     }
+
+</table>

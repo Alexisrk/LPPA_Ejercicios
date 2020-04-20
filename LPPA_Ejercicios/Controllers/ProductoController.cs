@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LPPA_Ejercicios.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,7 @@ namespace LPPA_Ejercicios.Controllers
         // GET: Producto
         public ActionResult Index()
         {
-            return View();
+            return View(RepProduct.GetAll());
         }
 
         public ActionResult Create()
@@ -20,8 +21,9 @@ namespace LPPA_Ejercicios.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(FormCollection form)
+        public ActionResult Create(Producto form)
         {
+            RepProduct.Add(form);
             return RedirectToAction("Index");
         }
     }
